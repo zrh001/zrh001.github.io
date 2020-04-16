@@ -9,17 +9,17 @@
     <script>
 
 
- var data
+ 
 
-$(function(){
+ $(function(){
      
     $.get("./data.json",function(result){
-         console.log("result");
-         data=result;
-    });
-    _.each(data, function(item){
+         console.log(result);
+       
+        _.each(result, function(item){
         $("ul").append("<li>"+item.name+"(学分："+item.credit+")"+"</li>");
 
+    }); 
     });
 })
 
