@@ -1,31 +1,29 @@
 <html>
-    <body>
-       <ul>
-            
-       </ul>
-        <script src="jquery-3.4.1.js"></script>
-        <script src="underscore.js"></script>
 
+
+<body> 
+    <ul>
+        <li>计算机安装维护:(3)</li>
+        <li>静态网页制作 :2</li>
+        <li>计算机编程导论基础:4</li>
+        <li></li>
+    </ul>
+    <script src="stat.js"></script>
+    <script  src="underscore.js"></script>
+   
+    
     <script>
-
-
- 
-
- $(function(){
-     
-    $.get("./data.json",function(result){
-         console.log(result);
-       
-        _.each(result, function(item){
-        $("ul").append("<li>"+item.name+"(学分："+item.credit+")"+"</li>");
-
-    }); 
+        $(function(){
+                $.get("./data.json",function(result){
+                    console.log(result);
+                    data=result;
+                _.each(data, function(item){
+                $("ul").append("<li>"+item.name+"(学分："+item.credit+")"+"</li>");
+                });
+        });
     });
-})
 
-
-    </script>
-
-
-    </body>
+</script>
+</body>
+ 
 </html>
